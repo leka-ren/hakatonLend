@@ -1,4 +1,5 @@
 body {
+  max-width: 1440px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,166 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  padding-top: 35px;
+  font-size: 13px;
+  width: calc(100% - 2px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__nav-menu {
+  padding-left: 80px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__nav-menu-element {
+  padding-right: 30px;
+  font-weight: 600;
+}
+
+.header__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: teal;
+}
+
+.header__button-alert {
+  background-color: #fff;
+  border: none;
+  font-size: 13px;
+  padding: 0 50px 0 50px;
+}
+
+.header__button-alert:hover {
+  color: teal;
+  cursor: pointer;
+}
+
+.cover {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 60px;
+}
+
+.cover__text-content {
+  padding-left: 80px;
+  width: 50%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover__title {
+  font-size: 15px;
+  color: #e7ba76;
+}
+
+.cover__discription {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cover__image-content {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.cover__image {
+  padding: 60px 80px;
+  width: 360px;
+  height: 360px;
+}
+
+.places {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.places__card {
+  display: flex;
+}
+
+.places__image {
+  width: 50%;
+  height: 38vw;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.places__text-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.places__title {
+  padding: 50px;
+  margin: 0;
+  font-size: 32px;
+}
+
+.places__descriptions-text {
+  max-width: 400px;
+  padding: 0 70px 35px;
+}
+
+.places__description {
+  padding-bottom: 15px;
+  font-size: 13px;
+}
+
+.quote {
+  margin: 100px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote__cards {
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.quote__card {
+  width: 250px;
+}
+
+.quote__title-card {
+  font-size: 15px;
+  font: bold;
+  padding-bottom: 10px;
+}
+
+.quote__discription-card {
+  font-size: 13px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #e4bb9f; 
+}
+
+.footer__title {
+  padding: 270px;
+  margin: 0 auto;
+  text-align: center;
 }
