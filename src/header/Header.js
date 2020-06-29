@@ -1,4 +1,5 @@
 import React from "react";
+import Alert from "../popup/popupAlert";
 
 function ListItem(props) {
   return (
@@ -11,12 +12,20 @@ function ListItem(props) {
   );
 }
 
-
 class Header extends React.Component {
   constructor(props) {
-      super(props);
-      this.props = props;
-      this.ButtonAlert = this.ButtonAlert.bind(this);
+    super(props);
+    this.props = props;
+    this.ButtonAlert = this.ButtonAlert.bind(this);
+    this.activeState = this.activeState.bind(this);
+    this.state = {
+      value: false,
+    };
+  }
+  activeState(boolVal) {
+    this.setState({
+      value: boolVal,
+    });
   }
 
   NavElementRender(props) {
@@ -28,10 +37,10 @@ class Header extends React.Component {
 
   ButtonAlert() {
     return (
-      <button className="header__button-alert" onClick={() => alert("kek")}>
+      <button className="header__button-alert" onClick={() => this.activeState(true)}>
         Пожаловаться
       </button>
-    )
+    );
   }
 
   render() {
@@ -39,6 +48,7 @@ class Header extends React.Component {
       <div className="header">
         {this.NavElementRender(this.props.dataNav)}
         {this.ButtonAlert()}
+        <Alert value={this.state.value} close={this.activeState} />
       </div>
     );
   }
